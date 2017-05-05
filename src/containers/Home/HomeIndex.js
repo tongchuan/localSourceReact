@@ -4,7 +4,14 @@ import { connect } from 'react-redux';
 import classNames from 'classnames'
 import * as actions1 from '../../actions/user'
 import * as actions2 from '../../actions/user0'
-
+import {
+  ButtonToolbar,
+  ButtonGroup,
+  Button,
+  OverlayTrigger,
+  Tooltip
+ } from 'react-bootstrap';
+import "./less/home.less"
 /**
  * connect中间件
  * connect一定要写在需要传递参数的组件头部，因为这是语法规则，只对当前关联的组件生效，和java的原理是一致的
@@ -21,10 +28,38 @@ export default class HomeIndex extends React.Component {
     super(props);
   }
   render() {
+    const tooltip = (
+      <Tooltip id="tooltip"><strong>Holy guacamole!</strong> Check this info.</Tooltip>
+    );
     return (
       <div>
+      {/*  <Button className="btn btn-default">ddd</Button>
+        HOME呜呜呜呜222
+        <span className="glyphicon glyphicon-asterisk">fasd</span>
+        <div className="home">
+        <ButtonGroup>
+          <Button>Left</Button>
+          <Button>Middle</Button>
+          <Button>Right</Button>
+        </ButtonGroup>
+        </div> */}
+        <ButtonToolbar>
+          <OverlayTrigger placement="left" overlay={tooltip}>
+            <Button bsStyle="default">Holy guacamole!</Button>
+          </OverlayTrigger>
 
-      HOME呜呜呜呜222
+          <OverlayTrigger placement="top" overlay={tooltip}>
+            <Button bsStyle="default">Holy guacamole!</Button>
+          </OverlayTrigger>
+
+          <OverlayTrigger placement="bottom" overlay={tooltip}>
+            <Button bsStyle="default">Holy guacamole!</Button>
+          </OverlayTrigger>
+
+          <OverlayTrigger placement="right" overlay={tooltip}>
+            <Button bsStyle="default">Holy guacamole!</Button>
+          </OverlayTrigger>
+        </ButtonToolbar>
       </div>
     )
   }

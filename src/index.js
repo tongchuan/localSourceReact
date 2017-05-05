@@ -5,6 +5,8 @@ import { BrowserRouter, HashRouter } from 'react-router-dom'
 import createHistory from 'history/createHashHistory'
 import configureStore from './store/configureStore';
 import AppRouter from './appRouter';
+// import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap/dist/css/bootstrap.css'
 import './less/app.less'
 const history = createHistory({queryKey: false})
 var FastClick = require('fastclick');

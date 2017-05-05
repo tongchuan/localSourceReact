@@ -3,6 +3,7 @@ var webpack = require('webpack');
 var autoprefixer = require('autoprefixer');
 var precss = require('precss');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ExtractTextPlugin 		= 	require('extract-text-webpack-plugin');
 //判断当前运行环境是开发模式还是生产模式
 const nodeEnv = process.env.NODE_ENV || 'development';
 const isPro = nodeEnv === 'production';
@@ -41,6 +42,12 @@ if (isPro) {
   )
 }
 plugins.push(
+new ExtractTextPlugin({
+    filename: 'style/[name].css',
+    allChunks: true,
+  })
+)
+plugins.push(
   new HtmlWebpackPlugin({
     title:"REACT-张彤川",
     template:"./src/index.html"
@@ -55,7 +62,8 @@ module.exports = {
     // filename: 'js/[name]-[hash].js',
     filename: 'js/[name].js',
     path: path.join(__dirname, 'build'),
-    publicPath: 'http://localhost:3011/build/',
+    publicPath: './',
+    // publicPath: 'http://localhost:3011/build/',
     chunkFilename: 'js/[name]-[hash].js'
   },
   // BASE_URL是全局的api接口访问地址
@@ -77,13 +85,25 @@ module.exports = {
           include: path.join(__dirname, 'src')
       }, {
           test: /\.(less|css)$/,
-          use: ["style-loader", "css-loader", "less-loader", "postcss-loader"]
+          // use: ["style-loader", "css-loader", "less-loader", "postcss-loader"]
+          // use: [{loader:ExtractTextPlugin.extract("style-loader", "css-loader", "less-loader", "postcss-loader")}]
+          // use: [
+          //   {loader:ExtractTextPlugin.extract("style-loader")},
+          //   {loader:"css-loader"},
+          //   {loader:"less-loader"},
+          //   {loader:"postcss-loader"}
+          // ]
+          use:ExtractTextPlugin.extract({
+            fallback: 'style-loader',
+            //resolve-url-loader may be chained before sass-loader if necessary
+            use: ['css-loader', 'less-loader', 'sass-loader']
+          })
       }, {
-          test: /\.(png|jpg|gif|md)$/,
+          test: /\.(png|jpg|gif|md|woff|woff2|ttf|eot|svg)$/,
           use: ['file-loader?limit=10000&name=images/[md5:hash:base64:10].[ext]']
-      }, {
+      }/*, {
           test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
           use: ['url-loader?limit=10000&mimetype=image/svg+xml']
-      }],
+      }*/],
   }
 };
