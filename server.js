@@ -17,13 +17,14 @@ app.use(compression());
 app.use(webpackDevMiddleware(compiler, {
   historyApiFallback: true,
   noInfo: true,
+  // filename: webpackConfig.output.filename,
   publicPath: webpackConfig.output.publicPath,
   headers: { "X-Custom-Header": "yes" },
   stats: {
     colors: true
   }
 }));
-
+// console.log(compiler)
 app.use(webpackHotMiddleware(compiler));
 app.use('/build/', express.static(__dirname + '/build/'));
 

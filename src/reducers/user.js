@@ -10,6 +10,6 @@ export function user(state = initData, action) {
             }
 
         default:
-            return state;
+            return {...state};
     }
 }

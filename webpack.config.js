@@ -29,6 +29,7 @@ if (isPro) {
   )
 } else {
     app.push('webpack-hot-middleware/client?path=http://localhost:3011/__webpack_hmr&reload=true&noInfo=false&quiet=false')
+    // app.push('webpack-hot-middleware/client?reload=true&noInfo=false&quiet=false')
     plugins.push(
       new webpack.DefinePlugin({
           'process.env':{
@@ -51,7 +52,8 @@ module.exports = {
     app: app
   },
   output: {
-    filename: 'js/[name]-[hash].js',
+    // filename: 'js/[name]-[hash].js',
+    filename: 'js/[name].js',
     path: path.join(__dirname, 'build'),
     publicPath: 'http://localhost:3011/build/',
     chunkFilename: 'js/[name]-[hash].js'
