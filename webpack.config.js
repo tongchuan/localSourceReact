@@ -62,7 +62,7 @@ module.exports = {
     // filename: 'js/[name]-[hash].js',
     filename: 'js/[name].js',
     path: path.join(__dirname, 'build'),
-    publicPath: 'http://localhost:3011/',
+    publicPath: './',
     // publicPath: 'http://localhost:3011/build/',
     chunkFilename: 'js/[name]-[hash].js'
   },
@@ -99,8 +99,11 @@ module.exports = {
             use: ['css-loader', 'less-loader', 'sass-loader']
           })
       }, {
-          test: /\.(png|jpg|gif|md|woff|woff2|ttf|eot|svg)$/,
+          test: /\.(png|jpg|gif|md)$/,
           use: ['file-loader?limit=10000&name=images/[md5:hash:base64:10].[ext]']
+      },{
+        test: /\.(woff|woff2|ttf|eot|svg)$/,
+        use: ['file-loader?limit=10000&name=style/[md5:hash:base64:10].[ext]']
       }/*, {
           test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
           use: ['url-loader?limit=10000&mimetype=image/svg+xml']
