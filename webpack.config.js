@@ -62,7 +62,7 @@ module.exports = {
     // filename: 'js/[name]-[hash].js',
     filename: 'js/[name].js',
     path: path.join(__dirname, 'build'),
-    publicPath: './',
+    publicPath: 'http://localhost:3011/',
     // publicPath: 'http://localhost:3011/build/',
     chunkFilename: 'js/[name]-[hash].js'
   },

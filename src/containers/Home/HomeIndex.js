@@ -35,7 +35,7 @@ export default class HomeIndex extends React.Component {
       <div>
       {/*  <Button className="btn btn-default">ddd</Button>
         HOME呜呜呜呜222
-        <span className="glyphicon glyphicon-asterisk">fasd</span>
+
         <div className="home">
         <ButtonGroup>
           <Button>Left</Button>
@@ -43,6 +43,7 @@ export default class HomeIndex extends React.Component {
           <Button>Right</Button>
         </ButtonGroup>
         </div> */}
+        <span className="glyphicon glyphicon-asterisk">fasd</span>
         <ButtonToolbar>
           <OverlayTrigger placement="left" overlay={tooltip}>
             <Button bsStyle="default">Holy guacamole!</Button>
