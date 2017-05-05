@@ -80,7 +80,7 @@ module.exports = {
           use: ["style-loader", "css-loader", "less-loader", "postcss-loader"]
       }, {
           test: /\.(png|jpg|gif|md)$/,
-          use: ['file-loader?limit=10000&name=[md5:hash:base64:10].[ext]']
+          use: ['file-loader?limit=10000&name=images/[md5:hash:base64:10].[ext]']
       }, {
           test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
           use: ['url-loader?limit=10000&mimetype=image/svg+xml']

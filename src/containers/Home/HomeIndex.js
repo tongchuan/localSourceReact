@@ -5,7 +5,6 @@ import classNames from 'classnames'
 import * as actions1 from '../../actions/user'
 import * as actions2 from '../../actions/user0'
 
-import Header from '../../components/common/Header'
 /**
  * connect中间件
  * connect一定要写在需要传递参数的组件头部，因为这是语法规则，只对当前关联的组件生效，和java的原理是一致的
@@ -24,7 +23,7 @@ export default class HomeIndex extends React.Component {
   render() {
     return (
       <div>
-      <Header />
+
       HOME呜呜呜呜222
       </div>
     )

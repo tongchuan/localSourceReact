@@ -5,8 +5,6 @@ import classNames from 'classnames'
 
 import * as actions1 from '../../actions/user'
 import * as actions2 from '../../actions/user0'
-import './less/user.less'
-const imageurl = require('./images/1.jpg');
 /**
  * connect中间件
  * connect一定要写在需要传递参数的组件头部，因为这是语法规则，只对当前关联的组件生效，和java的原理是一致的
@@ -18,16 +16,13 @@ const imageurl = require('./images/1.jpg');
     state => state,
     dispatch => bindActionCreators({...actions2, ...actions1}, dispatch)
 )
-export default class UserIndex extends React.Component {
+export default class UserAdd extends React.Component {
   constructor(props) {
     super(props);
   }
   render() {
     return (
-      <div>
-        <div className="user">User</div>
-      <img src={imageurl} height=""/>
-      </div>
+      <div>UserAdd</div>
     )
   }
 }
