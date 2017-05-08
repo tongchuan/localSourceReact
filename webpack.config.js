@@ -15,6 +15,10 @@ var app = [
     'babel-polyfill',
     './src/index'
 ]
+var home = [
+    'babel-polyfill',
+    './src/index'
+]
 if (isPro) {
   plugins.push(
       new webpack.optimize.UglifyJsPlugin({
@@ -50,19 +54,28 @@ new ExtractTextPlugin({
 plugins.push(
   new HtmlWebpackPlugin({
     title:"REACT-张彤川",
-    template:"./src/index.html"
+    template:"./src/index.html",
+    chunks:['app'],
+    filename:'app.html'
+  }),
+  new HtmlWebpackPlugin({
+    title:"REACT-张彤川",
+    template:"./src/index.html",
+    chunks:['home'],
+    filename:'home.html'
   })
 )
 module.exports = {
   devtool: false,
   entry: {
-    app: app
+    app: app,
+    home: home
   },
   output: {
     // filename: 'js/[name]-[hash].js',
     filename: 'js/[name].js',
     path: path.join(__dirname, 'build'),
-    publicPath: './',
+    publicPath: 'http://localhost:3011/build/',
     // publicPath: 'http://localhost:3011/build/',
     chunkFilename: 'js/[name]-[hash].js'
   },

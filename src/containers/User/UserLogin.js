@@ -16,16 +16,13 @@ import * as actions2 from '../../actions/user0'
     state => state,
     dispatch => bindActionCreators({...actions2, ...actions1}, dispatch)
 )
-export default class ListIndex extends React.Component {
+export default class UserLogin extends React.Component {
   constructor(props) {
     super(props);
-    console.log(this);
-    // console.log(props.match.params.id);
-    console.log(props)
   }
   render() {
     return (
-      <div>ListIndex</div>
+      <div>UserLogin</div>
     )
   }
 }
