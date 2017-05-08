@@ -11,41 +11,40 @@ export default withRouter(class Bundle extends React.Component {
     this.load = this.load.bind(this);
   }
 
+  componentWillMount() {
+    console.log(this.props);
+    if(this.props.location.pathname!='/login'){
 
-    componentWillMount() {
-      console.log(this.props);
-      if(this.props.location.pathname!='/login'){
-        
-      }else{
-        this.load(this.props)
+    }else{
+      this.load(this.props)
+    }
+
+  }
+
+  componentWillReceiveProps(nextProps) {
+      if (nextProps.load !== this.props.load) {
+          this.load(nextProps)
       }
+  }
 
-    }
+  load(props) {
+      this.setState({
+          mod: null
+      })
+      props.load((mod) => {
+          this.setState({
+              // handle both es imports and cjs
+              mod: mod.default ? mod.default : mod
+          })
+      })
+  }
 
-    componentWillReceiveProps(nextProps) {
-        if (nextProps.load !== this.props.load) {
-            this.load(nextProps)
-        }
+  render() {
+    if(this.props.location.pathname!='/login'){
+      return <Redirect to="/login" />
     }
-
-    load(props) {
-        this.setState({
-            mod: null
-        })
-        props.load((mod) => {
-            this.setState({
-                // handle both es imports and cjs
-                mod: mod.default ? mod.default : mod
-            })
-        })
-    }
-
-    render() {
-      if(this.props.location.pathname!='/login'){
-        return <Redirect to="/login" />
-      }
-        if (!this.state.mod)
-            return false
-        return this.props.children(this.state.mod)
-    }
+    if (!this.state.mod)
+        return false
+    return this.props.children(this.state.mod)
+  }
 })
