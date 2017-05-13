@@ -100,6 +100,7 @@ module.exports = {
     return p;
   },
   findOne:function(where={}){
+    console.log(where);
     let p = new Promise(function(resolve,reject){
       User.findOne(where,function(err,doc){
         if(err==null){

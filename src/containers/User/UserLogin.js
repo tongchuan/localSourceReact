@@ -3,6 +3,9 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import classNames from 'classnames'
 import * as auth from '../../utils/auth'
+import Header from '../../components/common/Header'
+import createHistory from 'history/createHashHistory'
+const history = createHistory({queryKey: false})
 
 import * as actions1 from '../../actions/user'
 import * as actions2 from '../../actions/user0'
@@ -26,6 +29,9 @@ export default class UserLogin extends React.Component {
       pwd:'123456',
       log:true
     }
+    console.log(this);
+    // Redirect.to='/sdfgsdf'
+
     this.checkClick = this.checkClick.bind(this);
     this.inputChange = this.inputChange.bind(this);
     this.submitData = this.submitData.bind(this);
@@ -49,23 +55,27 @@ export default class UserLogin extends React.Component {
   }
   submitData(event){
     event.preventDefault();
-    let data = {
+    let param = {
       email:this.state.email,
       pwd:this.state.pwd
     }
 
     // console.log(this.props);
-    this.props.userfindOne(data,(err,data)=>{
+    this.props.userloginin(param,(err,data)=>{
       if(data.data){
         auth.login(data.data)
+        history.push('/');
+      }else{
+        console.log('登录失败');
       }
-      console.log(data);
+
     })
   }
 
   render() {
     return (
       <div className="container login">
+      <Header />
       <div className="form-horizontal">
         <div className="form-group">
           <label htmlFor="inputEmail3" className="col-sm-2 control-label">Email</label>

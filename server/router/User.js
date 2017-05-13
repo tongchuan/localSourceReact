@@ -11,24 +11,57 @@ router.all('/useradd',function(req, res, next){
     res.send({"code":10001,"msg":err.toString(),"data":[]})
   })
 })
-router.all('/userfindOne',function(req, res, next){
+router.post('/userloginout',function(req, res, next){
+  res.clearCookie("user");
+  res.send({"code":10000,"msg":"1111","data":null})
+})
+router.post('/userloginin',function(req, res, next){
   let email = req.body.email;
   let pwd = req.body.pwd;
-  let data = {
+  let param = {
     email:email,
     pwd:pwd
   }
-  User.findOne(data).then((data)=>{
-    if(data.email){
-      res.cookie("user",data.email);
-      res.send({"code":10000,"msg":"","data":data})
-    }else{
-      res.send({"code":10002,"msg":"","data":null})
-    }
+  // if(!param.email && !param.pwd){
+  //   res.send({"code":10001,"msg":"","data":null})
+  // }else{
+    User.findOne(param).then((data)=>{
+      if(data.email){
+        res.cookie("user",data.email);
+        res.send({"code":10000,"msg":"1111","data":data})
+      }else{
+        res.send({"code":10002,"msg":"","data":null})
+      }
+      // res.send({"code":10002,"msg":"","data":null})
+    },(err)=>{
+      res.send({"code":10001,"msg":err.toString(),"data":null})
+    })
+  // }
 
-  },(err)=>{
-    res.send({"code":10001,"msg":err.toString(),"data":null})
-  })
+})
+router.post('/userfindOne',function(req, res, next){
+  let email = req.body.email;
+  let pwd = req.body.pwd;
+  let param = {
+    email:email,
+    pwd:pwd
+  }
+  // if(!param.email && !param.pwd){
+  //   res.send({"code":10001,"msg":"","data":null})
+  // }else{
+    User.findOne(param).then((data)=>{
+      if(data.email){
+        res.cookie("user",data.email);
+        res.send({"code":10000,"msg":"1111","data":data})
+      }else{
+        res.send({"code":10002,"msg":"","data":null})
+      }
+      // res.send({"code":10002,"msg":"","data":null})
+    },(err)=>{
+      res.send({"code":10001,"msg":err.toString(),"data":null})
+    })
+  // }
+
 })
 router.all('/userlist',function(req, res, next){
   User.find().then((data)=>{
@@ -60,9 +93,9 @@ router.all('/add',function(req, res, next){
   // res.send(JSON.stringify(data));
   // res.render('index', { title: 'Express' });
 })
-router.all("*",function(req, res, next){
-  console.log('OK')
-  res.send("ddd");
-})
+// router.all("*",function(req, res, next){
+//   console.log('OK')
+//   res.send("ddd");
+// })
 
 module.exports = router;

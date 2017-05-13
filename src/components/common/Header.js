@@ -10,8 +10,20 @@ export default class Header extends React.Component {
       loggedIn: auth.loggedIn(),
       loginUser: auth.loggedName()
     }
-    console.log("Header");
-    console.log(this.props);
+    console.log(this);
+    this.loginOut = this.loginOut.bind(this);
+    this.authChange = this.authChange.bind(this);
+  }
+  authChange(){
+    this.setState({
+      loggedIn:auth.loggedIn()
+    })
+  }
+  componentDidMount(){
+    auth.onChange=this.authChange
+  }
+  loginOut(){
+    auth.logout();
   }
   render(){
     let that = this;
@@ -27,7 +39,8 @@ export default class Header extends React.Component {
                 {
                     that.state.loggedIn ? (
                       <ul className="nav navbar-nav">
-                      <li>您好，fas<Link to="/user/logout">Log out</Link></li>
+                      <li>您好，{that.state.loginUser}</li>
+                      <li><a onClick={that.loginOut} href="javascript:void(0)">Log out</a></li>
                       </ul>
                     ):(
                       <ul className="nav navbar-nav">
@@ -41,7 +54,7 @@ export default class Header extends React.Component {
             </div>
             <div className="navbar-collapse collapse navbar-right">
               <ul className="nav navbar-nav">
-                <li><a href="#">首页</a></li>
+                <li><a href="/user/list">首页</a></li>
                 <li><a href="#">新闻</a></li>
                 <li><a href="#">产品</a></li>
                 <li></li>

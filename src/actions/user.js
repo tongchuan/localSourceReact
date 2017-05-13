@@ -56,7 +56,7 @@ export function regist(data,callback){
 }
 export function userlist(data,callback){
   return (dispatch, getState) => {
-    let url = baseURL+'user/userlist?g'+Math.random()
+    let url = baseURL+'user/userlist?g='+Math.random()
     axios.post(
       url,
       data,
@@ -68,9 +68,23 @@ export function userlist(data,callback){
   }
 }
 
-export function userfindOne(data,callback){
+export function userloginin(data,callback){
   return (dispatch, getState) => {
-    let url = baseURL+'user/userfindOne?g'+Math.random()
+    let url = baseURL+'user/userloginin?g='+Math.random()
+    axios.post(
+      url,
+      data,
+    ).then((d)=>{
+      callback(undefined,d.data);
+    }).catch((err)=>{
+      callback(err);
+    })
+  }
+}
+
+export function userloginout(data,callback){
+  return (dispatch, getState) => {
+    let url = baseURL+'user/userloginout?g='+Math.random()
     axios.post(
       url,
       data,
@@ -84,4 +98,8 @@ export function userfindOne(data,callback){
 
 export function login(){
 
+}
+
+export function onChange(){
+  
 }

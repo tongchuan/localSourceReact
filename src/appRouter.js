@@ -46,12 +46,19 @@ const UserRegist = () => (
 import './less/AppBase.less'
 @connect (state => state)
 export default class AppRouter extends React.Component {
+  constructor(props){
+    super(props);
+    this.onChange= this.onChange.bind(this);
+  }
+  onChange(){
+
+  }
   render() {
       return (
           <div id="warp">
             {/*<Header /> */}
             <Router history={history}>
-                <div>
+                <div className="container">
                     <Route exact path="/" component={HomeIndex} />
                     <Route path="/user/login" component={UserLogin} />
                     <Route path="/user/logout" component={UserLogout} />
