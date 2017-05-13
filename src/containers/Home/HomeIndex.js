@@ -26,6 +26,8 @@ import "./less/home.less"
 export default class HomeIndex extends React.Component {
   constructor(props) {
     super(props);
+    console.log("home");
+    console.log(this.props);
   }
   render() {
     const tooltip = (
@@ -43,7 +45,7 @@ export default class HomeIndex extends React.Component {
           <Button>Right</Button>
         </ButtonGroup>
         </div> */}
-        <span className="glyphicon glyphicon-asterisk">fasd</span>
+        {/*<span className="glyphicon glyphicon-asterisk">fasd</span>
         <ButtonToolbar>
           <OverlayTrigger placement="left" overlay={tooltip}>
             <Button bsStyle="default">Holy guacamole!</Button>
@@ -60,7 +62,7 @@ export default class HomeIndex extends React.Component {
           <OverlayTrigger placement="right" overlay={tooltip}>
             <Button bsStyle="default">Holy guacamole!</Button>
           </OverlayTrigger>
-        </ButtonToolbar>
+        </ButtonToolbar>*/}
       </div>
     )
   }

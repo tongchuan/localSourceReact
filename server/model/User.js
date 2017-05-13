@@ -75,6 +75,30 @@ module.exports = {
     })
     return p;
   },
+  findSort:function(col){
+    let p = new Promise(function(resolve,reject){
+      let query = User.find({})
+      query.sort(col);
+      //query.limit(3); //限制条数
+      //query.skip(3)   //开始数 ，通过计算可是实现分页
+      query.exec(function(err,doc){
+        if(err==null){
+          resolve(doc)
+        }else{
+          reject(err)
+        }
+      })
+
+      // ({},function(err,doc){
+      //   if(err==null){
+      //     resolve(doc)
+      //   }else{
+      //     reject(err)
+      //   }
+      // })
+    })
+    return p;
+  },
   findOne:function(where={}){
     let p = new Promise(function(resolve,reject){
       User.findOne(where,function(err,doc){

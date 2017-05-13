@@ -13,7 +13,7 @@ console.log("当前运行环境：", isPro ? 'production' : 'development')
 var plugins = []
 var app = [
     'babel-polyfill',
-    './src/index'
+    './src/app'
 ]
 var home = [
     'babel-polyfill',
@@ -53,18 +53,20 @@ new ExtractTextPlugin({
 )
 plugins.push(
   new HtmlWebpackPlugin({
-    title:"REACT-张彤川",
+    title:"app-张彤川",
     template:"./src/index.html",
     chunks:['app'],
     filename:'app.html'
   }),
   new HtmlWebpackPlugin({
-    title:"REACT-张彤川",
+    title:"index-张彤川",
     template:"./src/index.html",
     chunks:['home'],
     filename:'home.html'
   })
 )
+
+
 module.exports = {
   devtool: false,
   entry: {
@@ -87,7 +89,11 @@ module.exports = {
     modules: [
       path.resolve(__dirname, 'node_modules'),
       path.join(__dirname, './src')
-    ]
+    ],
+    alias:{
+      'common':path.resolve(__dirname, 'src/components/common'),
+      'util':path.resolve(__dirname, 'utils'),
+    }
   },
 
   module: {
@@ -97,7 +103,7 @@ module.exports = {
           exclude: /node_modules/,
           include: path.join(__dirname, 'src')
       }, {
-          test: /\.(less|css)$/,
+          test: /\.css$/,
           // use: ["style-loader", "css-loader", "less-loader", "postcss-loader"]
           // use: [{loader:ExtractTextPlugin.extract("style-loader", "css-loader", "less-loader", "postcss-loader")}]
           // use: [
@@ -108,8 +114,19 @@ module.exports = {
           // ]
           use:ExtractTextPlugin.extract({
             fallback: 'style-loader',
-            //resolve-url-loader may be chained before sass-loader if necessary
-            use: ['css-loader', 'less-loader', 'sass-loader']
+            use: ['css-loader']
+          })
+      },{
+          test: /\.less$/,
+          use:ExtractTextPlugin.extract({
+            fallback: 'style-loader',
+            use: [{loader:'css-loader'},{loader:'less-loader'}]
+          })
+      },{
+          test: /\.scss$/,
+          use:ExtractTextPlugin.extract({
+            fallback: 'style-loader',
+            use: [{loader:'css-loader'},{loader:'sass-loader'}]
           })
       }, {
           test: /\.(png|jpg|gif|md)$/,
