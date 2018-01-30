@@ -1,0 +1,101 @@
+{
+  "success": true,
+  "message": "",
+  "data": [
+      {
+          "id": "accessorClass",
+          "lable": "访问器",
+          "datatype": 0,
+          "length": 200,
+          "digit": 0,
+          "refinfo": null,
+          "refinfocode": null,
+          "enumdata": null,
+          "hidden": null,
+          "defaultvalue": null
+      },
+      {
+          "id": "displayName",
+          "lable": "显示名称",
+          "datatype": 0,
+          "length": 50,
+          "digit": 0,
+          "refinfo": null,
+          "refinfocode": null,
+          "enumdata": null,
+          "hidden": null,
+          "defaultvalue": null
+      },
+      {
+          "id": "entityName",
+          "lable": "实体名",
+          "datatype": 0,
+          "length": 50,
+          "digit": 0,
+          "refinfo": null,
+          "refinfocode": null,
+          "enumdata": null,
+          "hidden": null,
+          "defaultvalue": null
+      },
+      {
+          "id": "entityType",
+          "lable": "数据类型",
+          "datatype": 6,
+          "length": 200,
+          "digit": 0,
+          "refinfo": null,
+          "refinfocode": null,
+          "enumdata": [
+              {
+                  "Entity": "实体"
+              },
+              {
+                  "Enum": "枚举"
+              },
+              {
+                  "Simple": "基本类型"
+              }
+          ],
+          "hidden": null,
+          "defaultvalue": null
+      },
+      {
+          "id": "fullClassName",
+          "lable": "完整类名",
+          "datatype": 0,
+          "length": 200,
+          "digit": 0,
+          "refinfo": null,
+          "refinfocode": null,
+          "enumdata": null,
+          "hidden": null,
+          "defaultvalue": null
+      },
+      {
+          "id": "id",
+          "lable": "实体标识",
+          "datatype": 0,
+          "length": 40,
+          "digit": 0,
+          "refinfo": null,
+          "refinfocode": null,
+          "enumdata": null,
+          "hidden": null,
+          "defaultvalue": null
+      },
+      {
+          "id": "mainTableName",
+          "lable": "默认关联表名",
+          "datatype": 0,
+          "length": 50,
+          "digit": 0,
+          "refinfo": null,
+          "refinfocode": null,
+          "enumdata": null,
+          "hidden": null,
+          "defaultvalue": null
+      }
+  ],
+  "code": 1
+}
