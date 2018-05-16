@@ -1,0 +1,47 @@
+{
+  "name": "preact-redux-router-app",
+  "version": "1.0.0",
+  "description": "the project for preact、preact-redux and preact-router of app",
+  "main": "index.js",
+  "scripts": {
+    "start": "cross-env NODE_ENV=development babel-node devServer.js --open --inline",
+    "dev": "cross-env NODE_ENV=development babel-node devServer.js",
+    "build": "cross-env NODE_ENV=production babel-node ./node_modules/.bin/webpack --optimize-minimize",
+    "testBuild": "cross-env NODE_ENV=production babel-node ./node_modules/.bin/webpack-dev-server --open --inline"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "RyanHsu",
+  "license": "ISC",
+  "bugs": {
+    "url": ""
+  },
+  "homepage": "",
+  "dependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "linkstate": "^1.0.1",
+    "preact": "^8.1.0",
+    "preact-compat": "^3.16.0",
+    "preact-redux": "^2.0.1",
+    "react-router-dom": "^4.1.1",
+    "redux": "^3.7.0",
+    "redux-promise": "^0.5.3",
+    "redux-thunk": "^2.2.0",
+    "whatwg-fetch": "^2.0.3"
+  },
+  "devDependencies": {
+    "cross-env": "^5.1.5",
+    "friendly-errors-webpack-plugin": "^1.7.0",
+    "html-webpack-plugin": "^3.0.7",
+    "preact-router-redux": "^4.1.0",
+    "webpack": "^3.8.1",
+    "webpack-cli": "^2.0.13",
+    "webpack-dev-server": "^2.5.1"
+  }
+}

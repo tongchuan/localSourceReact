@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Try Preact!</title>
+    <script>
+       window.jsonData = {
+            "errno": 0,
+            "msg": "",
+            "data": {
+               //  "sub":[
+               //      {
+               //          "active": {
+               //              "name":"elieen",
+               //              "phone": "18618405059",
+               //              "email": "elieen@163.com"
+               //           }
+               //     },
+               //     {
+               //          "active2": {
+               //              "name":"elieen",
+               //              "phone": "18618405059",
+               //              "email": "elieen@163.com"
+               //          }
+               //     }
+               // ],
+               "active": {
+                   "name":"active:elieen",
+                   "phone": "17701321596",
+                   "email": "elieen19870715@163.com"
+                },
+
+               "aboutData":{
+                  title:"朝韩定于4月27日举行领导人会晤,中方回应--linkxiaoksksk",
+                  star:"4.5",
+                  author:"linkxiao-template"
+              },
+              "contactData": {
+                    "name":"elieen",
+                    "phone": "18618405059",
+                    "email": "elieen@163.com"
+              },
+            	"headerData": {
+                    "title":"diudhhh",
+                    "useravatar": "useravatar",
+                    "username": "username"
+                },
+                "sideData": {
+                    "menuData": [
+                        {
+                            "name": "小程序首页",
+                            "url": ""
+                        },
+                        {
+                            "name": "开发管理",
+                            "url": ""
+                        },
+                        {
+                            "name": "成员管理",
+                             "url": ""
+                        },
+                        {
+                            "name": "设置",
+                            "url": ""
+                        },
+                        {
+                            "name": "关联熊掌号",
+                            "url": ""
+                        }
+                    ],
+                    "cur": 3
+                },
+                "contentData": {
+                    "appId": "aaa",
+                    "versionDesc": {
+                        "online" : [{
+                            "packageId": "onlineId1",
+                            "version": "v1.0.0.0",
+                            "committer": "appId",
+                            "commitTime": "***",
+                            "versionDesc": "",
+                            "remark": "",
+                            "operation": [0],
+                            "rollbackVersion": ""
+                        }],
+                        "check": [{
+                            "packageId": "checkId",
+                            "status": "1",
+                            "msg": "***",
+                            "version": "v1.2.0.0",
+                            "committer": "appId",
+                            "commitTime": "***",
+                            "versionDesc": "***",
+                            "remark": "**",
+                            "operation": [3, 4, 5]
+                        }],
+                        "coding":[{
+                            "packageId": "1234",
+                            "version": "v1.0.0.0",
+                            "committer": "appId",
+                            "commitTime": "***",
+                            "versionDesc": "***",
+                            "remark": "**",
+                            "operation": [1, 2]
+                        },
+                        {
+                            "packageId": "1234",
+                            "version": "v1.0.0.0",
+                            "committer": "appId",
+                            "commitTime": "***",
+                            "versionDesc": "***",
+                            "remark": "**",
+                            "operation": [1, 2]
+                       }]
+                    },
+                    "downloadDevUrl": "downloadDevUrl",
+                    "developSetUrl": "developSetUrl",
+                    "settingUrl": "settingUrl",
+
+                    "tabCur": "0",
+                    "tabData": [
+                    {
+                        "tab": "基本设置",
+                        "name": "baseSetting",
+                        "paneData":{
+                            "tableData": [
+                                {
+                                    "label": "小程序名称",
+                                    "value": "京东",
+                                    "explain": "一个月可以修改5次，本月还可以修改5次",
+                                    "modify": "修改",
+                                    "name": "app_name",
+                                    "canModify": true,
+                                    "errorTips": "小程序发布之前可修改2次名称，该小程序名称已经修改2次，无法继续修改。",
+                                    "fontlimit": 20,
+                                    "fontmin": 4,
+                                    "modifyMsg": ["本小程序名称还可修改5次，名称长度为4-20个字符，一个中文等于2个字符，提交名称前请检测名称是否可用"]
+                                },
+                                {
+                                    "label": "小程序头像",
+                                    "value": "http://gz.people.com.cn/NMediaFile/2014/1121/LOCAL201411211244000495905861909.jpg",
+                                    "explain": "一个月可以修改5次，本月还可以修改5次",
+                                    "modify": "修改",
+                                    "typeLimit": ["jpg", "png"],
+                                    "name": "photo_addr",
+                                    "canModify": true,
+                                    "errorTips": "小程序发布之前可修改2次名称，该小程序名称已经修改2次，无法继续修改。",
+                                    "modifyMsg": ["本小程序名称还可修改5次，名称长度为4-20个字符，一个中文等于2个字符，提交名称前请检测名称是否可用"]
+                                },
+                                {
+                                    "label": "小程序简介",
+                                    "value": "京东购物，多快好省，专业的时尚电商电商平台，在这里你可以拿到更多更好更快的优惠信息。",
+                                    "explain": "一个月可以修改5次，本月还可以修改5次",
+                                    "modify": "修改",
+                                    "name": "app_desc",
+                                    "fontlimit": 40,
+                                    "canModify": true,
+                                    "errorTips": "小程序发布之前可修改2次名称，该小程序名称已经修改2次，无法继续修改。",
+                                    "modifyMsg": ["本小程序名称还可修改5次，名称长度为4-20个字符，一个中文等于2个字符，提交名称前请检测名称是否可用"]
+                                },
+                                {
+                                    "label": "主体信息",
+                                    "value": "京东",
+                                    "explain": "媒体",
+                                    "modify": "详情",
+                                    "name": "app_main",
+                                    "canModify": true,
+                                    "errorTips": "小程序发布之前可修改2次名称，该小程序名称已经修改2次，无法继续修改。",
+                                    "modifyMsg": ["下列主体将是你使用百度小程序接入各项服务的唯一法律主体与缔约主体，主体类型和名称不可修改"],
+                                    "modalMsg": [{"title": "主体类型", "value": "媒体"},{"title": "主体类型", "value": "媒体"},{"title": "主体类型", "value": "媒体"}]
+                                },
+                                {
+                                    "label": "服务范围",
+                                    "value": [
+                                        {
+                                            "value": "1",
+                                            "label": "范围二1",
+                                            "children":
+                                            {
+                                                "value": "1-1",
+                                                "label": "lalal"
+                                            }
+                                        },
+                                        {
+                                            "value": "1",
+                                            "label": "范围二1",
+                                            "children": {
+                                                "value": "1-1",
+                                                "label": "lalal"
+                                            }
+                                        }
+                                    ],
+                                    "options": [{
+                                        "value": "0",
+                                        "label": "范围一",
+                                        "children": [{
+                                            "value": "0-0",
+                                            "label": "范围一0"
+                                        },{
+                                            "value": "0-1",
+                                            "label": "范围一1"
+                                        },{
+                                            "value": "0-2",
+                                            "label": "范围一2"
+                                        },{
+                                            "value": "0-3",
+                                            "label": "范围一3"
+                                        },{
+                                            "value": "0-4",
+                                            "label": "范围一4"
+                                        },{
+                                            "value": "0-5",
+                                            "label": "范围一5"
+                                        }]
+                                        }, {
+                                        "value": "1",
+                                        "label": "范围二",
+                                        "children": [{
+                                            "value": "1-0",
+                                            "label": "范围二0"
+                                        },{
+                                            "value": "1-1",
+                                            "label": "范围二1"
+                                        },{
+                                            "value": "1-2",
+                                            "label": "范围二2"
+                                        },{
+                                            "value": "1-3",
+                                            "label": "范围二3"
+                                        },{
+                                            "value": "1-4",
+                                            "label": "范围二4"
+                                        },{
+                                            "value": "1-5",
+                                            "label": "范围二5"
+                                        },{
+                                            "value": "1-6",
+                                            "label": "范围二6"
+                                        },{
+                                            "value": "1-7",
+                                            "label": "范围二7"
+                                        },{
+                                            "value": "1-8",
+                                            "label": "范围二8"
+                                        },{
+                                            "value": "1-9",
+                                            "label": "范围二9"
+                                        },{
+                                            "value": "1-10",
+                                            "label": "范围二10"
+                                        },{
+                                            "value": "1-11",
+                                            "label": "范围二11"
+                                        },{
+                                            "value": "1-12",
+                                            "label": "范围二12"
+                                        },{
+                                            "value": "1-13",
+                                            "label": "范围二13"
+                                        },{
+                                            "value": "1-14",
+                                            "label": "范围二14"
+                                        },{
+                                            "value": "1-15",
+                                            "label": "范围二15"
+                                        },{
+                                            "value": "1-16",
+                                            "label": "范围二16"
+                                        },{
+                                            "value": "1-17",
+                                            "label": "范围二17"
+                                        },{
+                                            "value": "1-18",
+                                            "label": "范围二18"
+                                        },{
+                                            "value": "1-19",
+                                            "label": "范围二19"
+                                        },{
+                                            "value": "1-20",
+                                            "label": "范围二20"
+                                        },{
+                                            "value": "1-21",
+                                            "label": "范围二21"
+                                        },{
+                                            "value": "1-22",
+                                            "label": "范围二22"
+                                        }]
+                                    }],
+                                    "explain": "媒体",
+                                    "modify": "修改",
+                                    "name": "options",
+                                    "canModify": true,
+                                    "errorTips": "小程序发布之前可修改2次名称，该小程序名称已经修改2次，无法继续修改。",
+                                    "modifyMsg": ["本小程序名称还可修改5次，名称长度为4-20个字符，一个中文等于2个字符，提交名称前请检测名称是否可用"]
+                                },
+                                {
+                                    "label": "暂停服务设置",
+                                    "value": "未暂停服务",
+                                    "explain": "暂停服务后，用户将不可以正常访问线上小程序版本小程序",
+                                    "modify": "暂停服务",
+                                    "name": "service",
+                                    "canModify": true,
+                                    "state": true,
+                                    "errorTips": "小程序发布之前可修改2次名称，该小程序名称已经修改2次，无法继续修改。",
+                                    "modifyMsg": [
+                                        "1、暂停服务后，所有用户将无法使用小程序，不影响小程序提交审核及发布",
+                                        "2、如需恢复服务，需在设置页面手动取消",
+                                        "3、百度客户端将展示暂停服务原因及预计恢复时间"
+                                    ]
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "tab": "开发设置",
+                        "name": "developSetting",
+                        "paneData": {
+                            "appData": {
+                                "appId": "wx5ece4bf377259b5e",
+                                "appKey": "wx5ece4bf377259b5e",
+                                "appSecret": "",
+                                "operateText": "重置"
+                            },
+                            "domainData1": {
+                                "config": {
+                                    "request": ["https://www.baidu.com", "https://www.baidu.com", "https://www.baidu.com"],
+                                    "socket": ["https://www.baidu.com", "https://www.baidu.com"],
+                                    "uploadFile": ["https://www.baidu.com"],
+                                    "downloadFile": ["https://www.baidu.com"]
+                                },
+                                "desc": "一个月内可申请5次修改，本月还可修改2次",
+                                "operateText": "修改"
+                            },
+                            "domainData": null
+                        }
+                    }]
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+  <div id="root">
+
+
+  </div>
+</body>
+</html>
