@@ -12,6 +12,7 @@ export default class Header extends React.Component {
           <li><Link to="/news">Index</Link></li>
           <li><Link to="/test">Index</Link></li>
           <li><Link to="/user">Index</Link></li>
+          <li><Link to="/formtest">FormTest</Link></li>
         </ul>
       </div>
     )

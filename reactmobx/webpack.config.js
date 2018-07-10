@@ -46,6 +46,10 @@ if(isPro){
       root: __dirname,
       verbose: true,
       dry: false
+    }),
+    new webpack.DllReferencePlugin({
+        context: __dirname,
+        manifest: require(path.join(__dirname, 'dll', 'manifest.json'))
     })
   )
 }else{
@@ -82,10 +86,6 @@ plugins.push(
   }),
   new webpack.ProvidePlugin({
     $: 'jquery',
-  }),
-  new webpack.DllReferencePlugin({
-      context: __dirname,
-      manifest: require(path.join(__dirname, 'dll', 'manifest.json'))
   })
 )
 // plugins.push(new webpack.optimize.CommonsChunkPlugin({
