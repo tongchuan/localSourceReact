@@ -10,6 +10,11 @@ import CheckBoolean from '@/components/form/CheckBoolean'
 import DateTime from '@/components/form/DateTime'
 import DateTimeBetween from '@/components/form/DateTimeBetween'
 import RcTree from '@/components/form/RcTree'
+import Table from '@/components/form/Table'
+import TableTest from '@/components/form/TableTest'
+import Upfile from '@/components/form/Upfile'
+
+
 @observer
 export default class FormTest extends React.Component {
   constructor(props){
@@ -98,9 +103,25 @@ export default class FormTest extends React.Component {
   render(){
     return (
       <div>
+        <Upfile
+          baseUrl="http://172.20.4.220/note/freectr/file/view" />
+
+        <Upfile 
+          chooseAndUpload={false}
+          baseUrl="http://172.20.4.220/note/freectr/file/view" />
+        {/* <TableTest />
+        <Table data={[
+          {id:1, name: 'Product1', price: 1200},
+          {id:2, name: 'Product2', price: 1000},
+          {id:3, name: 'Product3', price: 1200},
+          {id:4, name: 'Product4', price: 1000},
+          {id:5, name: 'Product5', price: 1200},
+          {id:2, name: 'Product2', price: 1000}
+        ]}/> */}
         <form>
-        <h1>FormTest</h1>
-        <RcTree />
+
+        {/* <h1>FormTest</h1> */}
+        {/* <RcTree /> */}
         {/* <DateTimeBetween
           wrapClassName={'warpclass'}
           startClassName=""
@@ -184,7 +205,7 @@ export default class FormTest extends React.Component {
             maxlength={10}
             className="form-control"
             onChang={()=>{}} /> */}
-        <input type="submit" onClick={this.onSubmitForm} value="tijiao" />
+        {/* <input type="submit" onClick={this.onSubmitForm} value="tijiao" /> */}
         </form>
       </div>
     )

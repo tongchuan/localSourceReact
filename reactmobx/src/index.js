@@ -3,6 +3,8 @@ import ReactDom from 'react-dom';
 import {Router, Route, Link, IndexRoute, hashHistory} from 'react-router';
 import Bundle from '@/bundle.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import '@/less/Upfile.less'
+
 import App from '@/containers/App'
 import NewsListContainer                 from 'bundle-loader?lazy&name=[name]!@/containers/news/NewsList' ;
 import NewsTestContainer                 from 'bundle-loader?lazy&name=[name]!@/containers/news/NewsTest' ;
