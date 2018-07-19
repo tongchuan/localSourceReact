@@ -104,6 +104,7 @@ export default class FormTest extends React.Component {
     return (
       <div>
         <Upfile
+          param={{name:111,age:2222}}
           baseUrl="http://172.20.4.220/note/freectr/file/view" />
 
         <Upfile 
