@@ -1,4 +1,4 @@
-import { configure } from '@storybook/react';
+import { configure } from '_@storybook_react@3.4.8@@storybook/react/dist/client';
 
 function loadStories() {
   require('../stories/index.js');
