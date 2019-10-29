@@ -59,7 +59,7 @@
     "less": "^2.7.2",
     "less-loader": "^4.0.3",
     "middleware": "^1.0.0",
-    "mongoose": "^4.9.6",
+    "mongoose": "^5.7.7",
     "morgan": "^1.8.1",
     "node-sass": "^4.5.2",
     "nodemon": "^1.11.0",
