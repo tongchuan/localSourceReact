@@ -6814,9 +6814,9 @@ sprintf-js@~1.0.2:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/sprintf-js/-/sprintf-js-1.0.3.tgz#04e6926f662895354f3dd015203633b857297e2c"
 
-ssc-refer@0.1.36:
-  version "0.1.36"
-  resolved "https://registry.yarnpkg.com/ssc-refer/-/ssc-refer-0.1.36.tgz#6470f338b42485146d5f03b86ef23c683580ae97"
+ssc-refer@^0.1.37:
+  version "0.1.37"
+  resolved "https://registry.yarnpkg.com/ssc-refer/-/ssc-refer-0.1.37.tgz#380f87b2d16c5ff961b70595c42e067b39ffbd03"
   dependencies:
     babel-runtime "^6.11.6"
     bee-icon "^0.1.1"
@@ -7224,8 +7224,8 @@ typedarray@^0.0.6:
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
 
 ua-parser-js@^0.7.9:
-  version "0.7.17"
-  resolved "https://registry.yarnpkg.com/ua-parser-js/-/ua-parser-js-0.7.17.tgz#e9ec5f9498b9ec910e7ae3ac626a805c4d09ecac"
+  version "0.7.28"
+  resolved "https://registry.yarnpkg.com/ua-parser-js/-/ua-parser-js-0.7.28.tgz#8ba04e653f35ce210239c64661685bf9121dec31"
 
 uglify-js@3.3.x:
   version "3.3.8"
