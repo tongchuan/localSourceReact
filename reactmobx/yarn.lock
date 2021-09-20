@@ -5068,8 +5068,8 @@ object-keys@^1.0.11, object-keys@^1.0.8:
   resolved "https://registry.yarnpkg.com/object-keys/-/object-keys-1.0.11.tgz#c54601778ad560f1142ce0e01bcca8b56d13426d"
 
 object-path@^0.11.3:
-  version "0.11.4"
-  resolved "https://registry.yarnpkg.com/object-path/-/object-path-0.11.4.tgz#370ae752fbf37de3ea70a861c23bba8915691949"
+  version "0.11.8"
+  resolved "https://registry.yarnpkg.com/object-path/-/object-path-0.11.8.tgz#ed002c02bbdd0070b78a27455e8ae01fc14d4742"
 
 object-visit@^1.0.0:
   version "1.0.1"
@@ -6126,6 +6126,12 @@ react-dom@^15.5.4:
     object-assign "^4.1.0"
     prop-types "^15.5.10"
 
+react-fileupload@^2.4.0:
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/react-fileupload/-/react-fileupload-2.4.0.tgz#766e8ae6379a6e23651c790443e7716eed94ae68"
+  dependencies:
+    react "^15.0.2"
+
 react-highlighter@^0.3.3, react-highlighter@^0.3.4:
   version "0.3.5"
   resolved "https://registry.yarnpkg.com/react-highlighter/-/react-highlighter-0.3.5.tgz#765846a64831be107231a82cad3f94d3c54edf41"
@@ -6286,6 +6292,16 @@ react-transform-hmr@^1.0.0:
   dependencies:
     global "^4.3.0"
     react-proxy "^1.1.7"
+
+react@^15.0.2:
+  version "15.7.0"
+  resolved "https://registry.yarnpkg.com/react/-/react-15.7.0.tgz#10308fd42ac6912a250bf00380751abc41ac7106"
+  dependencies:
+    create-react-class "^15.6.0"
+    fbjs "^0.8.9"
+    loose-envify "^1.1.0"
+    object-assign "^4.1.0"
+    prop-types "^15.5.10"
 
 react@^15.5.4:
   version "15.6.2"
