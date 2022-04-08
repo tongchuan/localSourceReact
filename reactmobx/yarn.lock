@@ -4798,13 +4798,9 @@ mobx@^3.1.9:
   version "3.4.1"
   resolved "https://registry.yarnpkg.com/mobx/-/mobx-3.4.1.tgz#37abe5ee882d401828d9f26c6c1a2f47614bbbef"
 
-moment@^2.17.1, moment@^2.18.1:
-  version "2.20.1"
-  resolved "https://registry.yarnpkg.com/moment/-/moment-2.20.1.tgz#d6eb1a46cbcc14a2b2f9434112c1ff8907f313fd"
-
-moment@^2.8.2:
-  version "2.22.2"
-  resolved "https://registry.yarnpkg.com/moment/-/moment-2.22.2.tgz#3c257f9839fc0e93ff53149632239eb90783ff66"
+moment@^2.17.1, moment@^2.29.2, moment@^2.8.2:
+  version "2.29.2"
+  resolved "https://registry.yarnpkg.com/moment/-/moment-2.29.2.tgz#00910c60b20843bcba52d37d58c628b47b1f20e4"
 
 morgan@^1.9.0:
   version "1.9.0"
@@ -6126,6 +6122,12 @@ react-dom@^15.5.4:
     object-assign "^4.1.0"
     prop-types "^15.5.10"
 
+react-fileupload@^2.4.0:
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/react-fileupload/-/react-fileupload-2.4.0.tgz#766e8ae6379a6e23651c790443e7716eed94ae68"
+  dependencies:
+    react "^15.0.2"
+
 react-highlighter@^0.3.3, react-highlighter@^0.3.4:
   version "0.3.5"
   resolved "https://registry.yarnpkg.com/react-highlighter/-/react-highlighter-0.3.5.tgz#765846a64831be107231a82cad3f94d3c54edf41"
@@ -6286,6 +6288,16 @@ react-transform-hmr@^1.0.0:
   dependencies:
     global "^4.3.0"
     react-proxy "^1.1.7"
+
+react@^15.0.2:
+  version "15.7.0"
+  resolved "https://registry.yarnpkg.com/react/-/react-15.7.0.tgz#10308fd42ac6912a250bf00380751abc41ac7106"
+  dependencies:
+    create-react-class "^15.6.0"
+    fbjs "^0.8.9"
+    loose-envify "^1.1.0"
+    object-assign "^4.1.0"
+    prop-types "^15.5.10"
 
 react@^15.5.4:
   version "15.6.2"
