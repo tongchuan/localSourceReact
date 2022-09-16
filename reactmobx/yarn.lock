@@ -1300,9 +1300,9 @@ boom@2.x.x:
   dependencies:
     hoek "2.x.x"
 
-bootstrap@^3.3.7:
-  version "3.3.7"
-  resolved "https://registry.yarnpkg.com/bootstrap/-/bootstrap-3.3.7.tgz#5a389394549f23330875a3b150656574f8a9eb71"
+bootstrap@^3.4.1:
+  version "3.4.1"
+  resolved "https://registry.yarnpkg.com/bootstrap/-/bootstrap-3.4.1.tgz#c3a347d419e289ad11f4033e3c4132b87c081d72"
 
 bowser@^1.0.0:
   version "1.9.1"
@@ -6126,6 +6126,12 @@ react-dom@^15.5.4:
     object-assign "^4.1.0"
     prop-types "^15.5.10"
 
+react-fileupload@^2.4.0:
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/react-fileupload/-/react-fileupload-2.4.0.tgz#766e8ae6379a6e23651c790443e7716eed94ae68"
+  dependencies:
+    react "^15.0.2"
+
 react-highlighter@^0.3.3, react-highlighter@^0.3.4:
   version "0.3.5"
   resolved "https://registry.yarnpkg.com/react-highlighter/-/react-highlighter-0.3.5.tgz#765846a64831be107231a82cad3f94d3c54edf41"
@@ -6286,6 +6292,16 @@ react-transform-hmr@^1.0.0:
   dependencies:
     global "^4.3.0"
     react-proxy "^1.1.7"
+
+react@^15.0.2:
+  version "15.7.0"
+  resolved "https://registry.yarnpkg.com/react/-/react-15.7.0.tgz#10308fd42ac6912a250bf00380751abc41ac7106"
+  dependencies:
+    create-react-class "^15.6.0"
+    fbjs "^0.8.9"
+    loose-envify "^1.1.0"
+    object-assign "^4.1.0"
+    prop-types "^15.5.10"
 
 react@^15.5.4:
   version "15.6.2"
