@@ -1266,9 +1266,9 @@ boom@2.x.x:
   dependencies:
     hoek "2.x.x"
 
-bootstrap@^3.3.7:
-  version "3.3.7"
-  resolved "https://registry.yarnpkg.com/bootstrap/-/bootstrap-3.3.7.tgz#5a389394549f23330875a3b150656574f8a9eb71"
+bootstrap@^3.4.1:
+  version "3.4.1"
+  resolved "https://registry.yarnpkg.com/bootstrap/-/bootstrap-3.4.1.tgz#c3a347d419e289ad11f4033e3c4132b87c081d72"
 
 bowser@^1.0.0:
   version "1.9.1"
@@ -6814,9 +6814,9 @@ sprintf-js@~1.0.2:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/sprintf-js/-/sprintf-js-1.0.3.tgz#04e6926f662895354f3dd015203633b857297e2c"
 
-ssc-refer@0.1.36:
-  version "0.1.36"
-  resolved "https://registry.yarnpkg.com/ssc-refer/-/ssc-refer-0.1.36.tgz#6470f338b42485146d5f03b86ef23c683580ae97"
+ssc-refer@^0.1.37:
+  version "0.1.37"
+  resolved "https://registry.yarnpkg.com/ssc-refer/-/ssc-refer-0.1.37.tgz#380f87b2d16c5ff961b70595c42e067b39ffbd03"
   dependencies:
     babel-runtime "^6.11.6"
     bee-icon "^0.1.1"
