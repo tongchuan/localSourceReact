@@ -5834,17 +5834,17 @@ q@^1.1.2:
   version "1.5.1"
   resolved "https://registry.yarnpkg.com/q/-/q-1.5.1.tgz#7e32f75b41381291d04611f1bf14109ac00651d7"
 
-qs@6.5.1, qs@^6.5.1:
+qs@6.5.1:
   version "6.5.1"
   resolved "https://registry.yarnpkg.com/qs/-/qs-6.5.1.tgz#349cdf6eef89ec45c12d7d5eb3fc0c870343a6d8"
 
-qs@6.5.2:
+qs@6.5.2, qs@^6.5.1:
   version "6.5.2"
   resolved "https://registry.yarnpkg.com/qs/-/qs-6.5.2.tgz#cb3ae806e8740444584ef154ce8ee98d403f3e36"
 
 qs@~6.4.0:
-  version "6.4.0"
-  resolved "https://registry.yarnpkg.com/qs/-/qs-6.4.0.tgz#13e26d28ad6b0ffaa91312cd3bf708ed351e7233"
+  version "6.4.1"
+  resolved "https://registry.yarnpkg.com/qs/-/qs-6.4.1.tgz#2bad97710a5b661c366b378b1e3a44a592ff45e6"
 
 query-string@^4.1.0, query-string@^4.2.2:
   version "4.3.4"
@@ -6126,6 +6126,12 @@ react-dom@^15.5.4:
     object-assign "^4.1.0"
     prop-types "^15.5.10"
 
+react-fileupload@^2.4.0:
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/react-fileupload/-/react-fileupload-2.4.0.tgz#766e8ae6379a6e23651c790443e7716eed94ae68"
+  dependencies:
+    react "^15.0.2"
+
 react-highlighter@^0.3.3, react-highlighter@^0.3.4:
   version "0.3.5"
   resolved "https://registry.yarnpkg.com/react-highlighter/-/react-highlighter-0.3.5.tgz#765846a64831be107231a82cad3f94d3c54edf41"
@@ -6286,6 +6292,16 @@ react-transform-hmr@^1.0.0:
   dependencies:
     global "^4.3.0"
     react-proxy "^1.1.7"
+
+react@^15.0.2:
+  version "15.7.0"
+  resolved "https://registry.yarnpkg.com/react/-/react-15.7.0.tgz#10308fd42ac6912a250bf00380751abc41ac7106"
+  dependencies:
+    create-react-class "^15.6.0"
+    fbjs "^0.8.9"
+    loose-envify "^1.1.0"
+    object-assign "^4.1.0"
+    prop-types "^15.5.10"
 
 react@^15.5.4:
   version "15.6.2"
